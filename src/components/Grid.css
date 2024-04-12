@@ -1,31 +1,75 @@
 /* ----------------------- grid column elements ----------------------- */
 
 .grid-columns {
-
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    justify-content: auto;
+    align-items: auto;
+    grid-gap: auto;
 }
 
 
 /* ----------------------- grid layout elements ----------------------- */
 
 .grid-layout {
+    display: grid;
+    grid-template:
+    "header header header"
+    "sidebar main main"
+    "sidebar main main"
+    "footer footer footer";
+}
+
+@media only screen and (max-width: 600px) {
+
+    .grid-layout {
+        display: grid;
+        grid-template:
+        "main"
+        "header"
+        "sidebar"
+        "footer";
+    }
 
 }
+
+@media only screen and (max-width: 300px) {
+
+    .grid-layout {
+        display: grid;
+        grid-template:
+        "header"
+        "main"
+        "footer";
+    }
+
+    #sidebar {
+        display: none;
+    }
+
+}
+
 
 
 #header {
     background-color: lightgreen;
+    grid-area: header;
 }
 
 #main {
     background-color: lightblue;
+    grid-area: main;
+    display: flex;
+    flex-wrap: wrap;
     
 }
 
 #footer {
     background-color: orange;
-    
+    grid-area: footer
 }
 
 #sidebar {
     background-color: pink;
+    grid-area: sidebar;
 }

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './Grid.css'
 
-function GridColumns() {
+function GridColumns({ className }) {
 
     const [data, setData] = useState( [1,2,3,4,5,6,7,8,9,0] )
 
@@ -24,7 +24,7 @@ function GridColumns() {
             {/* GRID LAYOUT */}
             <h2>Grid Layout</h2>
 
-            <div className="grid-layout styled-container">
+            <div className={`grid-layout styled-container ${className}`}>
 
                 <div id="header">HEADER</div>
                 <div id="sidebar">SIDEBAR</div>

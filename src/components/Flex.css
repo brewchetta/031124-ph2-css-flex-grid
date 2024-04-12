@@ -1,7 +1,10 @@
 /* ----------------------- flex container elements ----------------------- */
 
 .flex-container {
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10vh;
 }
 
 .flex-item {
@@ -28,4 +31,8 @@
 
 .flex-item:nth-child(5n + 3) {
     background-color: gold;
+}
+
+div.grid-columns {
+    background: red; 
 }
